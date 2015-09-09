@@ -1,93 +1,55 @@
-<!doctype html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html";charset="utf-8">
-		<title>桌面标签系统</title>
-		<meta name = "Keywords" content="关键词,关键词">
-		<meta name = "description" content="">
-	</head>
-	<style type="text/css">
-		*{margin:0;padding:0}
-		body{background:url("images/bg.jpg") top center;font-size:12px;font-family:"微软雅黑";color:#666;}
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>- by MJnickname</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">-</h1>
+      <h2 class="project-tagline">澶栧彿绾跨敓</h2>
+      <a href="https://github.com/MJnickname/-" class="btn">View on GitHub</a>
+      <a href="https://github.com/MJnickname/-/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/MJnickname/-/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-		/*desk start*/
-		.desk{width:200px;background:#FFF;box-shadow:2px 1px 10px 2px #000;display:none;position:absolute;top:0px;left:0px;}
-		.desk ul li {border-bottom:1px solid #E1E1E1;list-style:none;line-height:34px;padding-left:10px;}
-		.desk ul li:hover{background:#647E7c;color:#fff;}
-		/*desk end*/
-		.signbox{position:relative;}
-		.signbox .s_list{width:294px;height:310px;position:absolute;}
-		.signbox .s_list .s_content{width:226px;height:168px;position:absolute;top:53px;left:35px;font-size:20px;outline:none;}
-	</style>
-	<body>
-		<!--desk start-->
-		<div class= "desk">
-			<ul>
-				<li>新建文件夹</li>
-				<li onclick = "tz_menu(2);">添加便签</li>
-				<li onclick = "tz_menu(3);">清空便签</li>
-				<li onclick = "">上传资料</li>
-				<li>跟换背景</li>
-				<li>注销</li>
-			</ul>
-		</div>
-		<!--desk end-->
-        <div class="signbox"></div>
+    <section class="main-content">
+      <p><code>### Welcome to GitHub Pages.
+This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here [using GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/), select a template crafted by a designer, and publish. After your page is generated, you can check out the new</code>gh-pages` branch locally. If you鈥檙e using GitHub Desktop, simply sync your repository and you鈥檒l see the new branch.</p>
 
-	<!--引入jQuery-->
-	<script type = "text/javascript" src = "js/jquery-1.7.2.min.js"></script>
-	<script type = "text/javascript">
-		$(function(){
-			
-		
-		});
-		//屏蔽浏览器右键
-		document.oncontextmenu = function(){
-			return false;
-		}
-		//按下鼠标需要执行的操作
-		$(document).mousedown(function(e){
-			var key = e.which; //获取键位
-				if(key == 3){
-					var x = e.clientX;
-					var y = e.clientY;
-					//获取鼠标的X和Y坐标
-					$(".desk").show().css({left:x,top:y});
-				}
-				
-		});
-		//隐藏右键
-		$(document).click(function(){
-			$(".desk").hide();
-		});
-		function tz_menu(flag){
-			if(flag == 2){
-				//获取鼠标右键的位置
-				var left =  $(".desk").offset().left;
-				var top = $(".desk").offset().top;
+<h3>
+<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
 
-				$('.signbox').append("<div class = 's_list' style='left:"+left+"px;top:"+top+"px;'>"+
-				"<img src = 'images/2.jpg' alt ='便签' width='294' height='310' />"+
-				"<div class='s_content' contenteditable='true'></div>"+
-			    "</div>");
-				auto_timer();
-			}
-			if(flag==3){
-				$(".s_list").fadeOut(1000);
-				localStorage.removeItem("con");
-			}
-		}
-		var timer = null;
-		function auto_timer(){
-			var count = 3;
-			timer = setInterval(function(){
-				if(count<=0){
-					//保存内容
-					localStorage.setItem("con".$(".signbox").html());
-				}
-				count--;
-			},1000);
-		}
+<p>We鈥檝e crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
 
-	</script>
-	</body>
+<h3>
+<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating pages manually</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+
+<h3>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor鈥檚 GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we鈥檒l help you sort it out.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/MJnickname/-">-</a> is maintained by <a href="https://github.com/MJnickname">MJnickname</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
 </html>
